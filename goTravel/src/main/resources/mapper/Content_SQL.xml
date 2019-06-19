@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.goTravel.content.service.impl.ContentMapper">
+
+	<select id="selectContentServiceList" parameterType="String" resultType="Map">
+	/** [Content_SQL.xml][com.project.goTravel.area.service.impl.ContentMapper.selectContentServiceList"][지역검색어 데이터 조회][김지은]*/
+	SELECT * 
+	FROM t_reg_cat
+	WHERE CAT_NM LIKE CONCAT('%',#{_parameter},'%')
+	</select>
+</mapper>
